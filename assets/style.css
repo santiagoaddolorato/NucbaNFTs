@@ -30,7 +30,7 @@
 
 /* Header */
 header {
-  background: var(--secondary);
+  background: linear-gradient(to bottom, #121e3c, var(--secondary));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,11 +59,102 @@ header {
   font-weight: 600;
   color: var(--text-white);
 }
+/* carrito */
+#cart-toggle,
+#menu-toggle,
+.menu-label {
+  display: none;
+}
+
 .cart-icon {
   padding: 5px 10px;
   height: 30px;
   cursor: pointer;
 }
+
+.cart {
+  position: absolute;
+  right: 0;
+  top: 65px;
+  background: linear-gradient(to top, #121e3c, var(--background));
+  padding: 50px 30px;
+  border-left: 1px solid var(--nav-bg);
+  height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: scroll;
+  display: none;
+}
+.cart h2 {
+  color: var(--text-white);
+  font-size: 20px;
+  font-weight: 600;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--electric);
+  background: #2323238a;
+  border-radius: 10px;
+}
+.item-title {
+  color: var(--text-white);
+  font-size: 14px;
+}
+.item-bid {
+  color: var(--text-gray);
+  font-size: 12px;
+  font-weight: 300;
+}
+.item-price {
+  background: linear-gradient(to right, #30cfd0, #c43ad6);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 800;
+}
+.item-handler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.quantity-handler {
+  color: var(--text-white);
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: 1px solid var(--electric);
+}
+.down {
+  background: var(--secondary);
+}
+.item-quantity {
+  color: white;
+}
+.divider {
+  margin-top: 20px;
+  border: 0.5px solid var(--electric);
+}
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-white);
+}
+.cart-total p {
+  font-weight: 700;
+}
+.cart-total span {
+  font-size: 18px;
+}
+/* carrito funcional */
+#cart-toggle:checked + .cart {
+  display: flex;
+}
+
 /* Hero Section */
 main {
   background: var(--background);
@@ -95,6 +186,10 @@ main {
   font-weight: 800;
   width: 80%;
   min-width: 500px;
+  background: linear-gradient(to top, #30cfd0, #c43ad6);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .hero-info p {
   font-size: 14px;
@@ -192,6 +287,7 @@ main {
   display: flex;
   justify-content: space-around;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .info-card {
