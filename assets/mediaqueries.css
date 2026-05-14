@@ -36,4 +36,97 @@
   #menu-toggle:checked ~ .navbar-list {
     display: flex;
   }
+  .hero-info {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .hero-info h1 {
+    width: 90%;
+    max-width: 500px;
+  }
+  .hero-card {
+    display: none;
+  }
+  /* info */
+  #info h2 {
+    text-align: center;
+  }
+  .info-cards-container {
+    max-width: 80%;
+    gap: 5rem;
+  }
+  /* Discover */
+  #discover {
+    text-align: center;
+  }
+  .discover-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .discover-cards {
+    flex-direction: column;
+  }
+  .discover-cards img {
+    width: 100%;
+  }
+  /* productos */
+  .categories {
+    flex-wrap: wrap;
+    max-width: 390px;
+  }
+  .category {
+    width: 120px;
+  }
+  .products-container {
+    justify-content: center;
+  }
+}
+@media (max-width: 576px) {
+  .cart {
+    left: 0;
+    width: 100%;
+    border: none;
+  }
+  .card-item {
+    flex-wrap: wrap;
+  }
+  .hero-info p {
+    width: 100%;
+  }
+  .info-card {
+    width: 100%;
+    height: 350px;
+  }
+  #discover {
+    width: 80%;
+  }
+  #discover h2 {
+    font-size: 48px;
+    width: 100%;
+  }
+  .discover-text {
+    width: 100%;
+    padding: 10px;
+    line-height: 30px;
+    gap: 50px;
+  }
+  .discover-text a {
+    font-size: 20px;
+  }
+  .discover-cards {
+    gap: 20px;
+  }
+  /* Productos */
+  .categories {
+    max-width: 300px;
+  }
+  .products-container {
+    width: 80%;
+  }
+  .footer-links {
+    flex-direction: column;
+    text-align: center;
+  }
 }
