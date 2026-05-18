@@ -1,0 +1,27 @@
+/* hacemos smooth el scroll con vinculo ancla */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 65px;
+}
+/* overlay con glassmorphismo */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 65px;
+  left: 0;
+  z-index: 1;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  /* display: none; */
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+#cart-toggle:checked ~ .overlay,
+#menu-toggle:checked ~ .overlay {
+  display: block;
+  opacity: 1;
+}

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="./assets/mediaqueries.css" />
+    <link rel="stylesheet" href="./assets/animaciones.css" />
+    <link rel="icon" href="./assets/img/favicons/favicon-16x16.png" />
+
     <title>Nucba NFT</title>
   </head>
   <body>
@@ -19,9 +22,9 @@
         <input type="checkbox" id="menu-toggle" />
 
         <ul class="navbar-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Descubre</a></li>
-          <li><a href="#">BTC</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#info">Descubre</a></li>
+          <li><a href="#products">BTC</a></li>
           <li><a href="#">Youtube</a></li>
           <li><a href="#">Contactanos</a></li>
         </ul>
@@ -29,11 +32,12 @@
         <!-- Carrito -->
 
         <label for="cart-toggle" class="cart-label">
-          <img
+          <!-- <img
             src="./assets/img/cart-icon.svg"
             alt="Carrito de compras"
             class="cart-icon"
-          />
+          /> -->
+          <i class="fa-solid fa-cart-shopping cart-icon"></i>
         </label>
         <input type="checkbox" id="cart-toggle" />
         <!-- agregar al carrito -->
@@ -138,6 +142,7 @@
           </div>
           <button class="btn-add">Comprar</button>
         </div>
+        <div class="overlay"></div>
       </nav>
     </header>
     <main>

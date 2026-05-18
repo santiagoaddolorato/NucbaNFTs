@@ -5,6 +5,7 @@
   }
   .cart-icon {
     height: 33px;
+    padding-right: 50px;
   }
   .navbar-list {
     position: absolute;
@@ -19,7 +20,10 @@
     border-radius: 0px 0px 15px 15px;
     padding: 45px 30px;
     align-items: flex-start;
-    display: none;
+    /*  display: none; */
+    transform: translateX(-200%);
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
   }
   .navbar-list a {
     font-size: 18px;
@@ -35,6 +39,7 @@
   }
   #menu-toggle:checked ~ .navbar-list {
     display: flex;
+    transform: translateX(0);
   }
   .hero-info {
     text-align: center;
